@@ -24,7 +24,7 @@ export default function Experience() {
     {
       title: "Associate Software Engineer",
       company: "Digital Optimizer",
-      period: "04/2024 – 05/2025",
+      period: "01/2023 – 05/2025",
       website: "digitaloptimizer.co.uk",
       achievements: [
         "Developed and deployed AI/ML models for process optimization and decision support",
@@ -33,20 +33,20 @@ export default function Experience() {
         "Applied predictive modeling to automate and improve business workflows",
       ],
     },
-    {
-      title: "Frontend Developer",
-      company: "DevnbeansSolutions",
-      period: "12/2021 - 02/2024",
-      location: "Lahore",
-      achievements: [
-        "Developed responsive, user-friendly front-end interfaces using React.js and Material-UI",
-        "Built server-side logic and APIs with Node.js, Express.js, and Django",
-        "Managed and integrated databases like MySQL, MongoDB, and PostgreSQL",
-        "Movie App: Built a movie browsing app with real-time data from APIs and a Material UI interface",
-        "Reseller Dashboard: Developed a sales and inventory dashboard with real-time data updates",
-        "Delivered complete e-commerce platforms with shopping carts, user authentication, and payment integrations (e.g., PayPal)",
-      ],
-    },
+    // {
+      // title: "Frontend Developer",
+      // company: "DevnbeansSolutions",
+      // period: "12/2021 - 02/2024",
+      // location: "Lahore",
+      // achievements: [
+        // "Developed responsive, user-friendly front-end interfaces using React.js and Material-UI",
+        // "Built server-side logic and APIs with Node.js, Express.js, and Django",
+        // "Managed and integrated databases like MySQL, MongoDB, and PostgreSQL",
+        // "Movie App: Built a movie browsing app with real-time data from APIs and a Material UI interface",
+        // "Reseller Dashboard: Developed a sales and inventory dashboard with real-time data updates",
+        // "Delivered complete e-commerce platforms with shopping carts, user authentication, and payment integrations (e.g., PayPal)",
+      // ],
+    // },
   ];
 
   return (

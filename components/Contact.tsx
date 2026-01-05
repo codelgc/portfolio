@@ -46,10 +46,10 @@ export default function Contact() {
                     Email
                   </h4>
                   <a
-                    href="mailto:usamaamanat043@gmail.com"
+                    href="mailto:uamanat23@gmail.com"
                     className="text-base text-[#1A1A1A] hover:underline"
                   >
-                    usamaamanat043@gmail.com
+                    uamanat23@gmail.com
                   </a>
                 </div>
                 <div>
@@ -57,7 +57,7 @@ export default function Contact() {
                     Location
                   </h4>
                   <p className="text-base text-[#1A1A1A]">
-                    Johar Town, Lahore
+                    Lahore
                   </p>
                 </div>
                 <div>
@@ -65,12 +65,12 @@ export default function Contact() {
                     Portfolio
                   </h4>
                   <a
-                    href="https://usama-portfolio.netlify.app/"
+                    href="https://portfolio-phi-eight-81.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-base text-[#1A1A1A] hover:underline"
                   >
-                    usama-portfolio.netlify.app
+                    portfolio-phi-eight-81.vercel.app
                   </a>
                 </div>
               </div>

@@ -65,3 +65,19 @@ To add images to your projects:
 
 Images should be placed in the `public` folder and referenced with paths starting with `/`.
 
+## Resume Download
+
+1. Place your resume PDF file in the `public/` folder
+2. Name it `resume.pdf`
+3. The "Download Resume" button in the Hero section will automatically work
+
+## Contact Form Setup
+
+The contact form currently uses a `mailto:` link to open the user's email client. For production, you can integrate with:
+
+- **EmailJS**: https://www.emailjs.com/ (Free tier available)
+- **Formspree**: https://formspree.io/ (Free tier available)
+- **Your own backend API**: Create an API endpoint to handle form submissions
+
+To integrate EmailJS or Formspree, update the `handleSubmit` function in `components/ContactForm.tsx` with your service credentials.
+

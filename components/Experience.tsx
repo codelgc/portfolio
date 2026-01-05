@@ -1,4 +1,12 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function Experience() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const experiences = [
     {
       title: "Software Engineer",
@@ -42,17 +50,35 @@ export default function Experience() {
   ];
 
   return (
-    <section className="py-16 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <section ref={ref} id="experience" className="py-16 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
       <div className="space-y-12">
-        <div className="flex items-center justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center justify-between"
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1A1A1A]">
             EXPERIENCE
           </h2>
-        </div>
+        </motion.div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="border-l-2 border-gray-300 pl-6 space-y-3">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ x: 10 }}
+              className="border-l-2 border-gray-300 pl-6 space-y-3 relative group"
+            >
+              <motion.div
+                className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#1A1A1A] origin-top"
+                initial={{ scaleY: 0 }}
+                animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
+              />
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A1A]">
@@ -81,15 +107,26 @@ export default function Experience() {
                   {exp.period}
                 </span>
               </div>
-              <ul className="space-y-2 mt-4">
+              <motion.ul
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 + 0.4 }}
+                className="space-y-2 mt-4"
+              >
                 {exp.achievements.map((achievement, idx) => (
-                  <li key={idx} className="text-sm sm:text-base text-gray-700 leading-relaxed flex items-start">
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                    transition={{ duration: 0.4, delay: index * 0.2 + 0.5 + idx * 0.1 }}
+                    className="text-sm sm:text-base text-gray-700 leading-relaxed flex items-start"
+                  >
                     <span className="text-[#1A1A1A] mr-2">•</span>
                     <span>{achievement}</span>
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
-            </div>
+              </motion.ul>
+            </motion.div>
           ))}
         </div>
       </div>

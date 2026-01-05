@@ -98,8 +98,6 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               <h3 className="text-lg font-semibold text-[#1A1A1A]">Project Images</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {project.images.map((image, index) => {
-                  // Check if image is a path (starts with /) or a placeholder
-                  const isImagePath = image.startsWith('/');
                   const hasError = imageErrors.has(index);
                   
                   return (
@@ -107,7 +105,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                       key={index}
                       className="relative w-full h-64 bg-gray-200 rounded-lg overflow-hidden"
                     >
-                      {isImagePath && !hasError ? (
+                      {!hasError ? (
                         <img
                           src={image}
                           alt={`${project.title} - Image ${index + 1}`}
@@ -117,7 +115,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300">
                           <span className="text-gray-500 text-sm">
-                            {hasError ? 'Image not found' : `Project Image ${index + 1}`}
+                            Image not found
                           </span>
                         </div>
                       )}

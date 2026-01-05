@@ -13,6 +13,7 @@ export default function Experience() {
       company: "Data Intuitions",
       period: "05/2025 - Present",
       website: "https://dataintuitions.com/",
+      location: "Lahore",
       achievements: [
         "Developed a full enterprise website in .NET MVC with secure authentication, dynamic content, and SQL Server integration",
         "Created a module to fetch and save structured data using .NET MVC and SQL Server, enhancing internal workflow automation",

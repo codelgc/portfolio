@@ -10,7 +10,7 @@ export default function Hero() {
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("uamanat23@gmail.com");
+      await navigator.clipboard.writeText("usamaamanat043@gmail.com");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -78,7 +78,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="inline-flex items-center gap-2 bg-[#1A1A1A] text-white px-6 py-3 text-sm font-medium hover:bg-[#2A2A2A] transition-colors"
+              className="inline-flex items-center gap-2 bg-[#1A1A1A] text-white px-6 py-3 font-medium hover:bg-[#2A2A2A] transition-colors"
             >
               <span>{copied ? "EMAIL COPIED!" : "CONTACT ME"}</span>
               {copied ? (
@@ -92,7 +92,7 @@ export default function Hero() {
               )}
             </motion.button>
             <motion.a
-              href="/resume.pdf"
+              href="/usamaamanat-resume.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -46,10 +46,10 @@ export default function Contact() {
                     Email
                   </h4>
                   <a
-                    href="mailto:uamanat23@gmail.com"
+                    href="mailto:usamaamanat043@gmail.com"
                     className="text-base text-[#1A1A1A] hover:underline"
                   >
-                    uamanat23@gmail.com
+                    usamaamanat043@gmail.com
                   </a>
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="text-base text-[#1A1A1A] hover:underline"
                   >
-                    portfolio-phi-eight-81.vercel.app
+usama-amanat-portfolio.vercel.app
                   </a>
                 </div>
               </div>
